@@ -1,0 +1,445 @@
+:root {
+    --primary-color: #6999c9;  /* A dark shade of blue (professional and trustworthy) */
+    --secondary-color: #000803; /* A cool light gray (more neutral and versatile) */
+    --accent-color: #E67E22;    /* A warm orange (friendly and engaging) */
+    --background-color: #F4F6F7; /* A soft off-white (minimalistic and refreshing) */
+    --text-color: #34495E;      /* A deep grayish-blue (for readable text) */
+    --dark-text-color: #2C3E50;  /* Darker text color for readability */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* General body styles */
+body {
+    line-height: 1.6;
+    padding-top: 70px;
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--primary-color); /* Using root variable */
+    font-size: 20px;
+}
+
+.nav-link {
+    color: #F4F6F7 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar .navbar-brand {
+    font-size: 25px; 
+    color: #F4F6F7 !important;
+}
+
+.navbar .navbar-brand:hover {
+    color: var(--accent-color) !important;
+}
+
+.hamburger {
+    border: none !important;
+}
+
+/* Home section styles */
+#home {
+    min-height: 100vh;
+    background-color: #9ea0a1;  
+    text-align: center;
+    padding: 60px 0;  
+}
+
+/* Add margin-top for the image and text so that they don't sit too close to the heading */
+#home .row {
+    margin-top: 40px; 
+}
+
+#home .col-md-6 {
+    margin-top: 30px; 
+}
+
+#home h2, #home p {
+    margin-top: 25px; 
+}
+
+/* Ensure the text is nicely spaced */
+#home .lead {
+    margin-bottom: 25px;
+}
+
+/* Section styles (if you want all sections to have the same card and background behavior) */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+}
+
+.card-subtitle {
+    font-size: 1.3rem;
+}
+
+.card-text {
+    font-size: 1.25rem;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+.dl-font {
+    font-size: larger;
+}
+
+/* About Section */
+#about {
+    background-color: #BDC3C7; 
+    padding-top: 40px;
+}
+
+#about p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Education Section */
+#education {
+    background-color: #9ea0a1; 
+}
+
+/* Experience section */
+
+#experience {
+    background-color: #9ea0a1;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #BDC3C7;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #BDC3C7;
+}
+
+/* Contact section styling */
+#contact {
+    background-color: #9ea0a1;
+    padding-top: 40px;
+}
+
+#contact a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+dl.row {
+    margin-top: 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+    padding-bottom: 10px;
+}
+
+ul.list-unstyled {
+    padding-left: 20px;
+}
+
+ul.list-unstyled li {
+    padding-bottom: 5px;
+}
+
+#contact .list-group-item {
+    display: flex;
+    align-items: center;
+}
+
+#contact .fa {
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+}
+
+.list-group-item img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+    transition: transform 0.3s ease-in-out;  
+}
+
+.list-group-item img:hover {
+    transform: translateY(-5px);  
+}
+
+.c-grid {
+    text-align: center;
+}
+
+#contact .form-label {
+    font-weight: bold;
+}
+
+#contact .form-control {
+    border-radius: 8px;
+}
+
+#contact .btn-secondary {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#contact .list-group-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 16px;
+}
+
+#contact .list-group-item img {
+    margin-right: 10px;
+}
+
+#contact .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--primary-color); 
+    color: #F4F6F7 !important; 
+    padding: 20px 0;
+    font-size: 16px;
+    padding-bottom: 20px;
+    transition: color 0.3 ease;
+}
+
+footer .container p {
+    margin: 0;
+}
+
+/* Ensuring the card is responsive and looks neat on all screen sizes */
+#home .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#home .card-body {
+    padding: 20px;
+}
+
+#home .card-img-top {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.github-icon-link {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    z-index: 10; 
+    background-color: darkmagenta; 
+    border-radius: 50%; 
+    padding: 5px; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.github-icon-link:hover {
+    transform: scale(1.1); 
+    background-color: lightskyblue; 
+}
+
+.github-icon {
+    width: 40px; 
+    height: 40px;
+    display: block;
+}
+
+/* Responsive adjustments for Tablets and Mobile phones */
+@media (max-width: 1024px) {
+    /* Tablet */
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .navbar-brand, .nav-link {
+        color: #F4F6F7 !important;
+        font-size: 18px;
+    }
+
+    .navbar .navbar-toggler {
+        display: block;
+    }
+
+    /* Home section */
+    #home {
+        padding: 20px 0;
+    }
+
+    /* Cards section */
+    .card {
+        margin: 15px 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    .github-icon-link {
+        top: 8px;
+        right: 8px; 
+        padding: 4px; 
+    }
+
+    .github-icon {
+        width: 36px; 
+        height: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile */
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-brand, .nav-link {
+        color: #F4F6F7 !important;
+        font-size: 16px;
+    }
+
+    body {
+        padding-top: 150px;
+    }
+
+    #home .col-md-6 {
+        margin-bottom: 20px;
+    }
+
+    #home .card-body {
+        padding: 15px;
+    }
+
+    #home .card-title {
+        font-size: 1.5rem;
+    }
+
+    #home .lead {
+        font-size: 1rem;
+    }
+
+    #contact a {
+        font-size: 14px;
+    }
+
+    /* Projects section */
+    #projects .row {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        max-height: 200px; 
+        object-fit: cover; 
+    }
+    
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 19.2px;
+    }
+
+    /* Contact form */
+    #contact .form-label {
+        font-size: 16px;
+    }
+
+    #contact .form-control {
+        font-size: 14px;
+    }
+
+    #contact .btn-dark {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .github-icon-link {
+        top: 5px;
+        right: 5px; 
+        padding: 3px; 
+    }
+
+    .github-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
