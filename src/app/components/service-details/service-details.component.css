@@ -175,6 +175,11 @@
     margin-top: 10px;
     text-align: center;
   }
+
+  .btn-icon {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Small Devices (phones in landscape, tablets < 768px) */
@@ -199,11 +204,16 @@
     font-size: 1rem;
     text-align: center;
   }
-  
+
   .btn-back, .btn-outline-success {
     width: 100%;
     margin-left: 0 !important;
     margin-top: 10px;
+    text-align: center;
+  }
+
+  .btn-icon {
+    width: 100%;
     text-align: center;
   }
 }
@@ -221,6 +231,11 @@
 
   .btn-outline-success {
     margin-left: 15px;
+    text-align: center;
+  }
+
+  .btn-icon {
+    width: 100%;
     text-align: center;
   }
 }
