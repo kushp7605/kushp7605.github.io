@@ -174,10 +174,13 @@
     margin-left: 0 !important;
     margin-top: 10px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .btn-icon {
-    width: 100%;
+    width: 20px;
+    height: 20px;
     text-align: center;
   }
 }
@@ -210,10 +213,13 @@
     margin-left: 0 !important;
     margin-top: 10px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .btn-icon {
-    width: 100%;
+    width: 20px;
+    height: 20px;
     text-align: center;
   }
 }
@@ -232,10 +238,14 @@
   .btn-outline-success {
     margin-left: 15px;
     text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
 
   .btn-icon {
-    width: 100%;
+    width: 20px;
+    height: 20px;
     text-align: center;
   }
 }
