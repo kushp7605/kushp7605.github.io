@@ -199,6 +199,13 @@
     font-size: 1rem;
     text-align: center;
   }
+  
+  .btn-back, .btn-outline-success {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 
 /* Medium Devices (tablets, small laptops < 992px) */
