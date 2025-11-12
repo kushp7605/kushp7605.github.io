@@ -1,0 +1,189 @@
+.intro-industrial {
+  position: relative;
+  background: #ffffff;
+  color: #000;
+  overflow: hidden;
+}
+
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003057;
+  letter-spacing: 1.5px;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  padding: 160px 20px 40px;
+}
+
+.sub-title {
+  font-size: 1.6rem;
+  color: #555;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.intro-description {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  line-height: 1.6;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+  text-align: center;
+}
+
+/* Cards */
+.intro-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.intro-card::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(45deg, rgba(135,206,250,0.05), rgba(251,176,52,0.05));
+  transform: rotate(0deg);
+  transition: all 0.5s ease;
+}
+
+.intro-card:hover::before {
+  transform: rotate(45deg);
+}
+
+.intro-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fbb034;
+}
+
+/* Background Floating Dots & Sun Particles */
+/* Background Floating Dots & Sun Particles */
+.background-animation span {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  animation: floatDots 15s linear infinite;
+}
+
+/* Dark Yellow & Bluish Sun Particles */
+.background-animation .sun-particle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: sunFloat 10s linear infinite;
+}
+
+/* Assign colors using nth-child for variation */
+.background-animation .sun-particle:nth-child(6) { background: rgba(251,176,52,0.4); }  /* Dark Yellow */
+.background-animation .sun-particle:nth-child(7) { background: rgba(50,100,200,0.35); } /* Dark Bluish */
+.background-animation .sun-particle:nth-child(8) { background: rgba(251,176,52,0.3); }  /* Dark Yellow */
+.background-animation .sun-particle:nth-child(9) { background: rgba(50,100,200,0.25); } /* Dark Bluish */
+.background-animation .sun-particle:nth-child(10){ background: rgba(251,176,52,0.35); } /* Dark Yellow */
+
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatDots {
+  0% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-50px) translateX(20px) scale(1.2); opacity: 0.5; }
+  100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.3; }
+}
+
+@keyframes sunFloat {
+  0% { transform: translateY(0px) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-80px) scale(1.3); opacity: 0.6; }
+  100% { transform: translateY(0px) scale(1); opacity: 0.3; }
+}
+
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+
+/* Extra small devices - mobile (≤576px) */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+    padding: 120px 15px 25px;
+  }
+  .sub-title {
+    font-size: 1.3rem;
+  }
+  .intro-description {
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+  .intro-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Small devices - tablets (≤768px) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    padding: 140px 20px 30px;
+  }
+  .sub-title {
+    font-size: 1.4rem;
+  }
+  .intro-description {
+    font-size: 0.95rem;
+  }
+  .intro-card {
+    padding: 22px 18px;
+  }
+}
+
+/* Medium devices - laptops (≤992px) */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+    padding: 150px 20px 35px;
+  }
+  .sub-title {
+    font-size: 1.5rem;
+  }
+  .intro-description {
+    font-size: 1rem;
+  }
+  .intro-card {
+    padding: 24px 20px;
+  }
+}
+
+/* Large devices - desktops (>992px) */
+@media (min-width: 993px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .sub-title {
+    font-size: 1.6rem;
+  }
+  .intro-description {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,96 @@
+<!-- 
+<div class="container-fluid services-section1" *ngIf="services.length">
+  <h2 class="section-title"> PRODUCTS AND SERVICES</h2>
+  <div class="title-underline mx-auto"></div>
+
+  <ng-container *ngFor="let service of services; let i = index">
+    <div class="row mt-4" [ngClass]="{ 'reverse-layout': i % 2 !== 0 }">
+
+  
+      <div class="col-md-6 service-text-content">
+        <h4 class="service-text fw-bold">{{ service.title }}</h4>
+        <p class="service-description">
+          {{ service.description }}
+        </p>
+        <div class="view-more-container">
+          <a [routerLink]="['/services', service.id]" class="view-more fw-bold text-decoration-none">VIEW MORE</a>
+          <span class="arrow">➔</span>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 text-center service-img-content">
+        <img [src]="service.image" [alt]="service.title" class="img-fluid rounded service-img">
+      </div>
+    </div>
+
+    
+    <hr *ngIf="i < services.length - 1">
+  </ng-container>
+</div> -->
+
+<!-- <section class="services-section py-5 position-relative" *ngIf="services.length">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">PRODUCTS & SERVICES</h2>
+    <div class="title-underline mx-auto mb-5"></div>
+
+    <ng-container *ngFor="let service of services; let i = index">
+      <div class="row align-items-center mb-5 service-card-row" [ngClass]="{ 'flex-row-reverse': i % 2 !== 0 }">
+        
+        
+        <div class="col-md-6 mb-3 mb-md-0">
+          <div class="service-card fade-up" [ngStyle]="{'animation-delay': (i * 0.2)+'s'}">
+            <h4 class="service-title">{{ service.title }}</h4>
+            <p class="service-description">{{ service.description }}</p>
+            <a [routerLink]="['/services', service.id]" class="view-more-btn">VIEW MORE ➔</a>
+          </div>
+        </div>
+
+        
+        <div class="col-md-6 text-center">
+          <div class="service-img-wrapper fade-up" [ngStyle]="{'animation-delay': ((i*0.2)+0.1)+'s'}">
+            <img [src]="service.image" [alt]="service.title" class="img-fluid rounded service-img">
+          </div>
+        </div>
+      </div>
+
+      <hr *ngIf="i < services.length - 1" class="service-divider">
+    </ng-container>
+  </div>
+</section> -->
+
+<section class="services-section py-5 position-relative" *ngIf="services.length">
+
+  <div class="container">
+    <h2 class="section-title text-center mb-4">PRODUCTS & SERVICES</h2>
+    <div class="title-underline mx-auto mb-5"></div>
+
+    <ng-container *ngFor="let service of services; let i = index">
+      <div class="row align-items-center mb-5 service-card-row" [ngClass]="{ 'flex-row-reverse': i % 2 !== 0 }">
+        
+        <!-- Text Card -->
+        <div class="col-md-6 mb-3 mb-md-0">
+          <div class="service-card fade-up" [ngStyle]="{'animation-delay': (i * 0.2)+'s'}">
+            <h4 class="service-title">{{ service.title }}</h4>
+            <p class="service-description">{{ service.description }}</p>
+            <a [routerLink]="['/services', service.id]" class="view-more-btn">VIEW MORE ➔</a>
+            <button class="btn btn-outline-success" (click)="openInquiry(service)">
+              <img src="assets/images/conversation.png" alt="Inquiry Icon" class="btn-icon">
+              Send Inquiry
+            </button>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md-6 text-center">
+          <div class="service-img-wrapper fade-up" [ngStyle]="{'animation-delay': ((i*0.2)+0.1)+'s'}">
+            <img [src]="service.image" [alt]="service.title" class="img-fluid rounded service-img">
+          </div>
+        </div>
+      </div>
+
+      <hr *ngIf="i < services.length - 1" class="service-divider">
+    </ng-container>
+  </div>
+</section>
+

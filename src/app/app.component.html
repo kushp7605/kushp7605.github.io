@@ -1,0 +1,22 @@
+
+
+
+<main>
+  <!-- Loader (Shows When isLoading is True) -->
+  <app-loader [isLoading]="isLoading"></app-loader>
+
+  <!-- Wrapper for Page Content -->
+  <div class="wrapper" *ngIf="!isLoading">
+    <router-outlet></router-outlet>
+    
+    <a href="https://wa.me/919998223267" target="_blank" class="whatsapp-float">
+      <img src="assets/images/whatsapp.svg" alt="WhatsApp" />
+    </a>
+
+  </div>
+
+
+</main>
+
+
+

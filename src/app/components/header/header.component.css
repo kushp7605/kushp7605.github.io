@@ -1,0 +1,215 @@
+
+/* Navbar Base */
+/* Navbar Base */
+.custom-navbar {
+  background: #1a1a1a;
+  backdrop-filter: blur(12px); /* Glass effect */
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* Brand */
+.custom-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1rem; /* same as nav links */
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .logo {
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Brand text glow */
+.brand-text {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover glow effect for brand */
+.custom-navbar .navbar-brand:hover .logo {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.8));
+}
+
+.custom-navbar .navbar-brand:hover .brand-text {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+               0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* Nav Links */
+.custom-navbar .nav-link {
+  position: relative;
+  color: #fff;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 1rem; /* same as brand */
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffd700;
+}
+
+/* Underline Animation */
+.custom-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Toggler Icon (Custom White) */
+.custom-toggler {
+  border: none;
+  outline: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.theme-toggle-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: gold;
+  margin-left: 12px;
+  transition: transform .3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.15);
+  color: silver;
+}
+
+
+/* Mobile Adjustments */
+/* @media (max-width: 991px) {
+  .custom-navbar .nav-link {
+    margin-left: 0;
+    margin-top: 12px;
+    display: block;
+    text-align: center;
+  }
+} */
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+
+/* Extra small devices - mobile (≤576px) */
+@media (max-width: 576px) {
+  .custom-navbar {
+    padding: 10px 15px;
+    justify-content: center;
+  }
+
+  .custom-navbar .logo {
+    height: 50px;
+  }
+
+  .custom-navbar .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 0.9rem;
+    margin-left: 0;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Small devices - tablets (≤768px) */
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 10px 20px;
+  }
+
+  .custom-navbar .logo {
+    height: 55px;
+  }
+
+  .custom-navbar .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 0.95rem;
+    margin-left: 0;
+    margin-top: 12px;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Medium devices - laptops (≤992px) */
+@media (max-width: 992px) {
+  .custom-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  .custom-navbar .logo {
+    height: 55px;
+  }
+
+  .custom-navbar .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .custom-navbar .nav-link {
+    margin-left: 0;
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Large devices - desktops (≥1200px) */
+@media (min-width: 1200px) {
+  .custom-navbar {
+    flex-wrap: nowrap;
+    padding: 12px 30px;
+  }
+
+  .custom-navbar .logo {
+    height: 60px;
+  }
+
+  .custom-navbar .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 1rem;
+    margin-left: 20px;
+    text-align: left;
+  }
+}
+
+
+

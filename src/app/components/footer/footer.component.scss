@@ -1,0 +1,178 @@
+/* Footer Base */
+.custom-footer {
+  background: #1a1a1a;
+  backdrop-filter: blur(12px);
+  font-size: 0.95rem;
+}
+
+/* Brand */
+.custom-footer .footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-footer .footer-logo {
+  max-width: 150px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.custom-footer .brand-text {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Glow on hover */
+.custom-footer .footer-brand:hover .footer-logo,
+.custom-footer .footer-brand:hover .brand-text {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.9));
+  color: #ffd700;
+}
+
+/* Section Headings */
+.custom-footer h5 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.text-gold {
+  color: #ffd700;
+}
+
+/* Footer Links */
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.9);
+}
+
+/* Copyright */
+.custom-footer p {
+  color: white;
+}
+
+.custom-footer strong {
+  color: #ffd700;
+}
+
+/* =========================
+   FOOTER RESPONSIVE
+========================= */
+
+/* Extra small devices - mobile (≤576px) */
+@media (max-width: 576px) {
+  .custom-footer {
+    font-size: 0.85rem;
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .custom-footer .footer-brand {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-footer .footer-logo {
+    max-width: 120px;
+    margin-bottom: 8px;
+  }
+
+  .custom-footer .brand-text {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  .custom-footer h5 {
+    font-size: 1rem;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+/* Small devices - tablets (≤768px) */
+@media (max-width: 768px) {
+  .custom-footer {
+    font-size: 0.9rem;
+    padding: 25px 20px;
+  }
+
+  .custom-footer .footer-logo {
+    max-width: 130px;
+  }
+
+  .custom-footer .brand-text {
+    font-size: 0.95rem;
+  }
+
+  .custom-footer h5 {
+    font-size: 1.05rem;
+  }
+
+  .footer-link {
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium devices - laptops (≤992px) */
+@media (max-width: 992px) {
+  .custom-footer {
+    font-size: 0.95rem;
+    padding: 30px 25px;
+  }
+
+  .custom-footer .footer-logo {
+    max-width: 140px;
+  }
+
+  .custom-footer .brand-text {
+    font-size: 1rem;
+  }
+
+  .custom-footer h5 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large devices - desktops (≥1200px) */
+@media (min-width: 1200px) {
+  .custom-footer {
+    font-size: 0.95rem;
+    padding: 40px 30px;
+  }
+
+  .custom-footer .footer-logo {
+    max-width: 150px;
+  }
+
+  .custom-footer .brand-text {
+    font-size: 1rem;
+  }
+
+  .custom-footer h5 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Footer links hover and glow remain consistent across all sizes */
+.footer-link:hover,
+.custom-footer .footer-brand:hover .brand-text,
+.custom-footer .footer-brand:hover .footer-logo {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.9));
+  color: #ffd700;
+}
+
+

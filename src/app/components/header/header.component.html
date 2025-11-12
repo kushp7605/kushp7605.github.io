@@ -1,0 +1,69 @@
+<!-- 
+ <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand" routerLink="/home" routerLinkActive="active">
+      <img src="assets/images/ketechlogo.png" class="logo" alt="Company Logo">
+      <span class="brand-text">KE-TECH</span>
+    </a>
+
+    
+    <button class="navbar-toggler" type="button" (click)="isMenuOpen = !isMenuOpen">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li class="nav-item"><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li class="nav-item"><a routerLink="/services" routerLinkActive="active">Services</a></li>
+        <li class="nav-item"><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      </ul>
+    </div>
+
+    
+  </div>
+</nav>
+
+ -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container-fluid">
+    
+    <!-- Brand Logo -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/home">
+      <img src="assets/images/ketech_logo.png" alt="Logo" class="logo me-2">
+      <span class="brand-text">KE-TECH™</span>
+    </a>
+
+    <!-- Toggler Button -->
+    <button class="navbar-toggler custom-toggler" type="button" (click)="isMenuOpen = !isMenuOpen">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <!-- <button class="theme-toggle-btn" (click)="toggleTheme()">
+      <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+    </button> -->
+
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/team" routerLinkActive="active" class="nav-link">Team</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/services" routerLinkActive="active" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

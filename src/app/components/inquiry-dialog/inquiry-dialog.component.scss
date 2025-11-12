@@ -1,0 +1,247 @@
+
+
+/* =========================
+   PROFESSIONAL LIGHT DIALOG
+========================= */
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #8b5e3c;
+  z-index: 9999;
+}
+
+.inquiry-dialog {
+  background: #f5e6d3; /* light brownish/professional */
+  border-radius: 15px;
+  padding: 30px;
+  color: #333;
+  animation: fadeInUp 0.6s ease-out;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Scrollbar styling */
+.inquiry-dialog::-webkit-scrollbar {
+  width: 8px;
+}
+.inquiry-dialog::-webkit-scrollbar-track {
+  background: #f5e6d3;
+  border-radius: 4px;
+}
+.inquiry-dialog::-webkit-scrollbar-thumb {
+  background: #c49a6c77;
+  border-radius: 4px;
+}
+.inquiry-dialog::-webkit-scrollbar-thumb:hover {
+  background: #c49a6ccc;
+}
+
+.product-preview {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-preview img {
+  max-width: 280px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+
+/* Dialog Title */
+.inquiry-dialog h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #8b5e3c;
+}
+
+/* Contact Buttons */
+.inquiry-dialog .contact-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.inquiry-dialog .contact-options button {
+  flex: 1 1 calc(25% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid #00bfff;
+  color: #00bfff;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.inquiry-dialog .contact-options button:hover {
+  background: #00bfff;
+  color: #f5e6d3;
+  box-shadow: 0 0 12px #00bfff, 0 0 25px #00bfff66;
+  transform: translateY(-2px);
+}
+
+/* Form Styling */
+.inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Mat Form Fields */
+.inquiry-form mat-form-field {
+  width: 100%;
+  background: #fff0e6; /* single uniform background */
+  border-radius: 6px;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+  background: transparent;
+  color: #333;
+  border: none;
+  padding: 12px 10px;
+  font-size: 1rem;
+}
+
+.inquiry-form input::placeholder,
+.inquiry-form textarea::placeholder {
+  color: #8b5e3c;
+}
+
+/* Buttons Row */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.form-buttons button {
+  flex: 1;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: #d3bca0; /* light brownish */
+  color: #333;
+}
+
+/* Hover effect for both buttons */
+.form-buttons button:hover {
+  background: #8b5e3c; /* golden brown on hover */
+  color: #fff;
+  box-shadow: 0 0 12px #8b5e3c55, 0 0 20px #8b5e3c33;
+  transform: translateY(-2px);
+}
+
+/* Disabled state for Send Inquiry */
+.form-buttons button[type="submit"]:disabled {
+  background: #aaa;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+
+/* Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+// @media (max-width: 576px) {
+//   .inquiry-dialog .contact-options button {
+//     flex: 1 1 100%;
+//   }
+// }
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+
+/* Extra small devices - mobile (≤576px) */
+@media (max-width: 576px) {
+  .inquiry-dialog {
+    padding: 20px;
+    max-height: 100vh;
+    width: 100%;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 5px;
+    font-size: 1.3rem;
+  }
+
+  .inquiry-dialog h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+  }
+
+  .inquiry-dialog .contact-options button {
+    flex: 1 1 100%;
+    font-size: 1rem;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}
+
+/* Small devices - tablets (≤768px) */
+@media (max-width: 768px) {
+  .inquiry-dialog {
+    padding: 25px;
+    max-width: 500px;
+  }
+
+  .inquiry-dialog h2 {
+    font-size: 1.6rem;
+  }
+
+  .product-name {
+    font-size: 1.3rem;
+  }
+}
+
+/* Medium devices - laptops (≤992px) */
+@media (max-width: 992px) {
+  .inquiry-dialog {
+    max-width: 550px;
+  }
+
+  .inquiry-dialog h2 {
+    font-size: 1.7rem;
+  }
+}

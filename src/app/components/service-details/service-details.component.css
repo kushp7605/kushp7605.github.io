@@ -1,0 +1,240 @@
+/* =========================
+   SERVICE DETAILS SECTION
+========================= */
+.service-details-section {
+  background: #fefefe;
+  /* padding: 100px 20px; */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Title */
+.service-details-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003057;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpScroll 0.8s ease forwards;
+  padding: 160px 20px 40px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: #fbb034;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+}
+
+/* Card */
+.service-details-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  opacity: 1;
+  transform: translateY(20px);
+  /* animation: fadeUpScroll 0.8s ease forwards; */
+  transition: all 0.5s ease;
+}
+
+.service-details-card:hover {
+  transform: translateY(-10px); /* same as .service-card */
+  opacity: 1;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* stronger shadow */
+  background: linear-gradient(135deg, rgba(135,206,250,0.08), rgba(251,176,52,0.08)); /* subtle gradient */
+}
+
+/* Image */
+.service-details-img-wrapper {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  animation: imageZoomRotate 10s ease-in-out infinite;
+}
+
+.service-details-img-wrapper:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.service-details-img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Text */
+.service-details-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Back Button */
+.btn-back {
+  display: inline-block;
+  font-weight: 600;
+  background: #003057;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-back:hover {
+  background: #fbb034;
+  color: #003057;
+  transform: translateY(-3px);
+}
+
+.btn-outline-success {
+  display: inline-flex;
+  margin-left: 20px;
+  align-items: center;
+  font-weight: 600;
+  color: #003057;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  gap: 10px;
+  background-color: burlywood;
+  text-align: center;
+}
+
+.btn-outline-success:hover {
+  color: #fbb034;
+  transform: translateX(5px);
+  background-color: darkgreen;
+}
+
+.btn-icon {
+  width: 20px; 
+  height: 20px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUpScroll {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes imageZoomRotate {
+  0%   { transform: scale(1) rotate(0deg); }
+  25%  { transform: scale(1.05) rotate(1deg); }
+  50%  { transform: scale(1.1) rotate(-1deg); }
+  75%  { transform: scale(1.05) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+/* @media (max-width: 768px) {
+  .service-details-card {
+    padding: 20px;
+  }
+
+  .service-details-img-wrapper {
+    margin-bottom: 20px;
+  }
+} */
+
+/* =======================================
+   SERVICE DETAILS — RESPONSIVE IMPROVEMENT
+======================================= */
+
+/* Extra Small Devices (phones, < 576px) */
+@media (max-width: 576px) {
+
+  .service-details-title {
+    font-size: 1.8rem;
+    padding: 120px 15px 30px;
+    text-align: center;
+  }
+
+  .service-details-card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .service-details-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Buttons */
+  .btn-back, .btn-outline-success {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+/* Small Devices (phones in landscape, tablets < 768px) */
+@media (max-width: 768px) {
+
+  .service-details-title {
+    font-size: 2rem;
+    padding-top: 140px;
+    text-align: center;
+  }
+
+  .service-details-img-wrapper {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .service-details-card {
+    padding: 22px;
+  }
+
+  .service-details-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Medium Devices (tablets, small laptops < 992px) */
+@media (max-width: 992px) {
+
+  .service-details-title {
+    font-size: 2.3rem;
+  }
+
+  .service-details-card {
+    padding: 26px;
+  }
+
+  .btn-outline-success {
+    margin-left: 15px;
+    text-align: center;
+  }
+}
+
+/* Large Devices (desktops > 992px) */
+@media (min-width: 993px) {
+  .service-details-title {
+    font-size: 2.5rem;
+  }
+
+  .service-details-card {
+    max-width: 100%;
+  }
+}
+
+/* Extra-large (4K, ultra-wide > 1400px) */
+@media (min-width: 1400px) {
+  .service-details-title {
+    font-size: 3rem;
+  }
+}
+
+
+

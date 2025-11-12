@@ -1,0 +1,128 @@
+.team-section {
+  background: #ffffff;
+  padding: 200px 20px 140px;;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003057;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: #fbb034;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Team Cards */
+.team-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  background: linear-gradient(45deg, rgba(135,206,250,0.05), rgba(251,176,52,0.05));
+}
+
+/* Image Style */
+.team-img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fbb034;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.08);
+}
+
+.team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #003057;
+  margin-top: 15px;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #777;
+}
+  
+/* Responsive */
+// @media (max-width: 768px) {
+//   .team-section {
+//     padding: 70px 15px;
+//   }
+
+//   .team-img {
+//     width: 120px;
+//     height: 120px;
+//   }
+// }
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 1024px) {
+  .team-section {
+    padding: 150px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 150px 15px;
+  }
+
+  .team-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 150px 15px;
+  }
+  
+  .team-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-name {
+    font-size: 1.1rem;
+  }
+}

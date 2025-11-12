@@ -1,0 +1,59 @@
+<!-- <app-header></app-header>
+<div class="container-fluid service-details">
+  <div class="container mt-5" *ngIf="selectedService">
+    <div class="header">
+      <h1>{{ selectedService.title }}</h1>
+    </div>
+
+    <div class="project-container">
+      <img [src]="selectedService.image" class="card-img-top" alt="Service Image" />
+      <p>{{ selectedService.description }}</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer> -->
+
+<app-header></app-header>
+
+<section class="service-details-section py-5" *ngIf="selectedService">
+  <div class="container">
+    
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <h1 class="service-details-title fade-up">{{ selectedService.title }}</h1>
+      <div class="title-underline mx-auto"></div>
+    </div>
+
+    <!-- Card Container -->
+    <div class="service-details-card fade-up">
+      <div class="row align-items-center">
+        
+        <!-- Image -->
+        <div class="col-md-6 mb-4 mb-md-0 text-center">
+          <div class="service-details-img-wrapper">
+            <img [src]="selectedService.image" [alt]="selectedService.title" class="service-details-img">
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="col-md-6">
+          <div class="service-details-text">
+            <p>{{ selectedService.description }}</p>
+            <a routerLink="/services" routerLinkActive="active-link" class="btn btn-back mt-3">← Back to Services</a>
+            <!-- Place this inside your service-details-text div -->
+            <button class="btn btn-outline-success" (click)="openInquiry(selectedService)">
+              <img src="assets/images/conversation.png" alt="Inquiry Icon" class="btn-icon">
+              Send Inquiry
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+

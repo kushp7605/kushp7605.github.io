@@ -1,0 +1,227 @@
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+.services-section {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  /* // padding: 100px 20px; */
+  text-align: center;
+}
+
+/* Section Titles */
+.section-title {
+  padding: 160px 20px 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #003057;
+  opacity: 1; /* make visible */
+  transform: translateY(0); /* reset transform */
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: #fbb034;
+  margin: 0 auto 50px auto;
+  border-radius: 2px;
+}
+
+/* Service Card */
+.service-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 1; /* visible */
+  transform: translateY(0);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, rgba(135,206,250,0.08), rgba(251,176,52,0.08));
+}
+
+.service-title {
+  font-weight: 700;
+  color: #fbb034;
+  margin-bottom: 15px;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.view-more-btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #003057;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  color: #fbb034;
+  transform: translateX(5px);
+}
+
+.btn-outline-success {
+  display: inline-flex;
+  margin-left: 20px;
+  align-items: center;
+  font-weight: 600;
+  color: #003057;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  gap: 10px;
+  background-color: burlywood;
+}
+
+.btn-outline-success:hover {
+  color: #fbb034;
+  transform: translateX(5px);
+  background-color: darkgreen;
+}
+
+.btn-icon {
+  width: 20px; 
+  height: 20px;
+}
+
+
+/* =========================
+   IMAGE WRAPPER & FLOATING
+========================= */
+.service-img-wrapper {
+  position: relative;
+  opacity: 1; /* visible */
+  transform: translateY(0);
+}
+
+/* Floating animation on the image itself */
+.service-img-wrapper img {
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  animation: floatImage 12s ease-in-out infinite;
+}
+
+.service-img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Staggered floating delays */
+.service-img-wrapper:nth-of-type(1) img { animation-delay: 0s; }
+.service-img-wrapper:nth-of-type(2) img { animation-delay: 2s; }
+.service-img-wrapper:nth-of-type(3) img { animation-delay: 4s; }
+.service-img-wrapper:nth-of-type(4) img { animation-delay: 1s; }
+
+/* Divider */
+.service-divider {
+  border: 0;
+  height: 3px;
+  background: black;
+  margin: 50px 0;
+  width: 100%;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes floatImage {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(10px, -10px) rotate(1deg); }
+  50%  { transform: translate(-10px, 10px) rotate(-1deg); }
+  75%  { transform: translate(10px, 5px) rotate(1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-img-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .service-img-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .flex-row-reverse {
+    flex-direction: column !important;
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets + Mobile (ensure image goes first & stacks) */
+@media (max-width: 992px) {
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-img-wrapper {
+    margin-bottom: 22px;
+  }
+
+  .service-img-wrapper img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .flex-row-reverse {
+    flex-direction: column !important;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.9rem;
+    padding-top: 120px;
+  }
+
+  .service-card {
+    padding: 18px;
+  }
+
+  .btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Large screens (4K) */
+@media (min-width: 1440px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+
+

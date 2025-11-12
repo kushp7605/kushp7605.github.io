@@ -1,0 +1,85 @@
+<app-header></app-header>
+
+<section class="contact-section">
+  <div class="container">
+    <!-- Title -->
+    <div class="section-header text-center">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">We’d love to hear from you. Fill out the form and we’ll get back to you shortly.</p>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <!-- Contact Card -->
+        <div class="contact-card shadow-lg">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input id="firstName" formControlName="firstName" type="text" class="form-control" placeholder="First Name" autofocus />
+                  <label for="firstName">First Name <span class="text-danger">*</span></label>
+                </div>
+                <div *ngIf="hasSubmitted && contactForm.controls['firstName'].invalid" class="text-danger small mt-1">
+                  First Name is required.
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input id="lastName" formControlName="lastName" type="text" class="form-control" placeholder="Last Name" />
+                  <label for="lastName">Last Name <span class="text-danger">*</span></label>
+                </div>
+                <div *ngIf="hasSubmitted && contactForm.controls['lastName'].invalid" class="text-danger small mt-1">
+                  Last Name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4 mt-1">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input id="email" formControlName="email" type="email" class="form-control" placeholder="Email" />
+                  <label for="email">Email <span class="text-danger">*</span></label>
+                </div>
+                <div *ngIf="hasSubmitted && contactForm.controls['email'].invalid" class="text-danger small mt-1">
+                  {{ contactForm.controls['email'].errors?.['required'] ? 'Email is required.' : 'Enter a valid email address.' }}
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input id="phone" formControlName="phone" type="tel" class="form-control" placeholder="Phone" />
+                  <label for="phone">Phone</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-floating mt-4">
+              <input id="company" formControlName="company" type="text" class="form-control" placeholder="Company" />
+              <label for="company">Company</label>
+            </div>
+
+            <div class="form-floating mt-4">
+              <textarea id="message" formControlName="message" class="form-control" placeholder="Message" style="height: 150px;"></textarea>
+              <label for="message">Message <span class="text-danger">*</span></label>
+            </div>
+            <div *ngIf="hasSubmitted && contactForm.controls['message'].invalid" class="text-danger small mt-1">
+              Message is required.
+            </div>
+
+            <div class="mt-4">
+              <button type="submit" class="btn-submit w-100">
+                {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+              </button>
+            </div>
+
+            <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+
