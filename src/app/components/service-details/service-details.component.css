@@ -228,13 +228,15 @@
     width: 100%;
     margin-left: 0 !important;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     text-align: center;
   }
 
   .btn-icon {
     width: 20px;
     height: 20px;
-    text-align: center;
   }
 }
 
@@ -251,6 +253,8 @@
 
   .btn-outline-success {
     margin-left: 15px;
+    display: flex;
+    gap: 10px;
     text-align: center;
     justify-content: center;
     text-align: center;
@@ -260,7 +264,6 @@
   .btn-icon {
     width: 20px;
     height: 20px;
-    text-align: center;
   }
 }
 
