@@ -407,15 +407,16 @@ p {
 
 @media (max-width: 768px) {
   .loader-center { padding-top: 150px; }
-  .energy-ring { width: 180px; height: 180px; }
+  .energy-ring { width: 220px; height: 220px; }
   .logo { width: 150px; }
   .tagline, .brand-headline { font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
-  .loader-center { padding-top: 100px; }
-  .energy-ring { width: 140px; height: 140px; }
-  .logo { width: 120px; }
+  .loader-center { padding-top: 250px;}
+  // .energy-ring { width: 140px; height: 140px; }
+  .energy-ring { width: 220px; height: 220px; }
+  .logo { width: 140px; }
   .tagline, .brand-headline { font-size: 1rem; }
   .bg-tile { width: 30px; height: 30px; }
 }

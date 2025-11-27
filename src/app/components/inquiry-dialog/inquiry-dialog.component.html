@@ -1,11 +1,11 @@
 <mat-dialog-content class="inquiry-dialog">
 
-<!-- Close Button -->
+
   <button mat-icon-button class="close-btn" (click)="dialogRef.close()">
     <mat-icon>close</mat-icon>
   </button>
 
-  <!-- Dialog Title -->
+  
   <h2>Send Inquiry For This Product</h2>
   <div class="title-underline"></div>
 
@@ -14,7 +14,7 @@
     <p>{{ data.productName }}</p>
 </div>
 
-  <!-- Contact Options -->
+ 
   <div class="contact-options d-flex gap-2 mb-3">
     <button mat-icon-button color="primary" (click)="openEmail()">
       <i class="fas fa-envelope"></i>
@@ -30,47 +30,51 @@
     </button>
   </div>
 
-  <!-- Inquiry Form -->
-  <form [formGroup]="inquiryForm" (ngSubmit)="sendEmail()" class="inquiry-form">
+  
+  <!-- <form [formGroup]="inquiryForm" (ngSubmit)="sendEmail()" class="inquiry-form">
 
-    <!-- Full Name -->
+    
     <mat-form-field appearance="fill" class="form-field">
       <input matInput placeholder="Full Name" formControlName="name" required>
     </mat-form-field>
 
-    <!-- Company -->
+    
     <mat-form-field appearance="fill" class="form-field">
       <input matInput placeholder="Company Name (Optional)" formControlName="company">
     </mat-form-field>
 
-    <!-- City -->
+    
      <mat-form-field appearance="fill" class="form-field">
       <input matInput placeholder="City" formControlName="city" required>
     </mat-form-field>
 
-    <!-- State -->
+    
     <mat-form-field appearance="fill" class="form-field">
       <input matInput placeholder="State" formControlName="state" required>
     </mat-form-field>
 
-    <!-- Email -->
+    
     <mat-form-field appearance="fill" class="form-field">
       <input matInput placeholder="Email" formControlName="email" required>
     </mat-form-field>
 
-    <!-- Phone -->
+    
     <mat-form-field appearance="fill" class="form-field">
       <input matInput placeholder="Phone" formControlName="phone" required>
     </mat-form-field>
 
-    <!-- Message -->
+    
     <mat-form-field appearance="fill" class="form-field">
       <textarea matInput placeholder="Message" formControlName="message" required></textarea>
-    </mat-form-field>
+    </mat-form-field> -->
 
-    <!-- Buttons -->
+    
     <div class="form-buttons">
-      <button mat-raised-button color="primary" type="submit" [disabled]="inquiryForm.invalid">
+      <!-- <button mat-raised-button color="primary" type="submit" [disabled]="inquiryForm.invalid">
+        Send Inquiry
+      </button> -->
+      <button mat-raised-button color="primary" type="button" (click)="openGoogleForm()">
+        <i class="fas fa-file-signature me-2"></i>
         Send Inquiry
       </button>
       <button mat-raised-button color="warn" type="button" (click)="goBack()">
@@ -78,6 +82,23 @@
       </button>
     </div>
 
-  </form>
+  <!-- </form> -->
 </mat-dialog-content>
+
+<!-- <div class="form-buttons">
+  <button mat-raised-button color="primary" (click)="openGoogleForm()">
+    Send Inquiry
+  </button>
+  <button mat-raised-button color="warn" type="button" (click)="goBack()">
+    Back
+  </button>
+</div> -->
+
+<!-- <div class="form-buttons">
+  <button mat-raised-button color="primary" (click)="openGoogleForm()">
+    Send Inquiry
+  </button>
+</div> -->
+
+
 
