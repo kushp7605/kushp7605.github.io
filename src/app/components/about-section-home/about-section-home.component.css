@@ -64,6 +64,15 @@
   color: #003057;
 }
 
+.title2 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: titleReveal 1s ease forwards;
+  opacity: 0;
+  color: #003057;
+}
+
 .subtitle {
   font-size: 1.5rem;
   margin-top: 10px;
@@ -225,6 +234,10 @@
 
   .title {
     font-size: 1.5rem;
+  }
+
+  .title2 {
+    font-size: 1.2rem;
   }
 
   .subtitle {
