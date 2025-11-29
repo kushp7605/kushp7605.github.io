@@ -51,7 +51,7 @@ export class ContactFormComponent {
 
       this.http.post<{ message: string }>('https://formspree.io/f/mgvprrnw', formData).subscribe({
         next: (response) => {
-          this.successMessage = response.message;
+          this.successMessage = 'Thank you for contacting us. Your message has been received, and our team will get back to you shortly.';
           this.contactForm.reset();
           this.hasSubmitted = false;
           setTimeout(() => (this.successMessage = ''), 5000);

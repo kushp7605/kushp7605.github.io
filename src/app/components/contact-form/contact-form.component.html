@@ -1,5 +1,4 @@
 <app-header></app-header>
-
 <section class="contact-section">
   <div class="container">
     <!-- Title -->
@@ -14,6 +13,9 @@
         <!-- Contact Card -->
         <div class="contact-card shadow-lg">
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+            
             <div class="row g-4">
               <div class="col-md-6">
                 <div class="form-floating">
@@ -72,8 +74,8 @@
               </button>
             </div>
 
-            <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
-            <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+            <!-- <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div> -->
           </form>
         </div>
       </div>

@@ -28,7 +28,7 @@ export class LoaderComponent implements AfterViewInit {
 
       setTimeout(() => {
         this.loader.nativeElement.classList.remove('loader--active');
-      }, 5000);
+      }, 500);
     }
   }
 }
